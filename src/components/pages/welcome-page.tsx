@@ -25,7 +25,7 @@ export const WelcomePage: FunctionComponent<WelcomePageProps> = ({
           </button>
 
           <div className="absolute bottom-0 p-12 text-gray-800 font-semibold">
-            <p>Alya Nur Fauzyah-{`{NIM}`}</p>
+            <p>Alya Nur Fauzyah-220003</p>
           </div>
         </div>
       </div>
