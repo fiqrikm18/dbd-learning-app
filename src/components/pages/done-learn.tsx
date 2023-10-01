@@ -1,4 +1,12 @@
-export const DoneLearn = () => {
+import { FunctionComponent } from "react";
+
+interface DonePageProps {
+  currentPoint: number;
+}
+
+export const DoneLearn: FunctionComponent<DonePageProps> = ({
+  currentPoint,
+}) => {
   return (
     <>
       <div className="w-full h-full p-24">
@@ -12,7 +20,7 @@ export const DoneLearn = () => {
             <p className="text-[16pt] font-semibold">Nilai anda adalah</p>
             <div className="flex flex-col justify-center items-center mt-4">
               <div className="border-solid border-gray-700 border-2 py-4 px-10 rounded-md">
-                100
+                {currentPoint}
               </div>
             </div>
             <button className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 mt-6">

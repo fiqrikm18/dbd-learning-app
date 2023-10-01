@@ -1,4 +1,12 @@
-export const MateriListPage = () => {
+import { FunctionComponent } from "react";
+
+interface WelcomePageProps {
+  btnClickEvent: () => void;
+}
+
+export const MateriListPage: FunctionComponent<WelcomePageProps> = ({
+  btnClickEvent,
+}) => {
   return (
     <>
       <div className="w-full h-full p-24">
@@ -67,7 +75,10 @@ export const MateriListPage = () => {
         </div>
 
         <div className="mt-6 text-center">
-          <button className="bg-gray-700 text-white font-semibold p-4 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 mt-4">
+          <button
+            onClick={btnClickEvent}
+            className="bg-gray-700 text-white font-semibold p-4 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 mt-4"
+          >
             Mulai!
           </button>
         </div>

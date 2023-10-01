@@ -3,9 +3,9 @@
 import { UserDataPage } from "@/components/pages/user-data";
 import { MateriListPage } from "@/components/pages/materi-list";
 import { WelcomePage } from "@/components/pages/welcome-page";
-import { Materi } from "@/components/pages/materi";
+import { MateriPage } from "@/components/pages/materi";
 import { ConfirmMateriDone } from "@/components/pages/confirm-materi-done";
-import { Soal } from "@/components/pages/soal";
+import { SoalPage } from "@/components/pages/soal";
 import { DoneLearn } from "@/components/pages/done-learn";
 import { useState } from "react";
 
@@ -18,10 +18,63 @@ export default function Home() {
     useState(false);
   const [showSoalPage, setShowSoalPage] = useState(false);
   const [showDoneLearnPage, setShowDoneLearnPage] = useState(false);
+  const [currenMateritIdx, setCurrentMateriIdx] = useState<number>(0);
+  const [currenSoalIdx, setCurrentsoalIdx] = useState<number>(0);
+  const [currentPoint, setCurrentPoint] = useState<number>(0);
 
   const clickButtonMulaiWelcomePage = () => {
     setShowWelcomePage(false);
     setShowUserDataPage(true);
+  };
+
+  const clickButtonSimpanUserDataPage = (value: any) => {
+    localStorage.setItem(
+      "user_data",
+      JSON.stringify({ username: value.uname, age: value.age })
+    );
+
+    setShowUserDataPage(false);
+    setShowMateriListPage(true);
+  };
+
+  const clickButtonMulaiMateriPage = () => {
+    setShowMateriListPage(false);
+    setShowMateriPage(true);
+  };
+
+  const clickButtonSelanjutnyaMateriPage = (value: any) => {
+    setCurrentMateriIdx(currenMateritIdx + 1);
+    if (value.nextPage) {
+      setShowMateriPage(false);
+      setShowConfirMateriDonePage(true);
+    }
+  };
+
+  const clickButtonYaMateriDonePage = () => {
+    setShowConfirMateriDonePage(false);
+    setShowSoalPage(true);
+  };
+
+  const clickButtonTidakMateriDonePage = () => {
+    setShowConfirMateriDonePage(false);
+    setShowMateriPage(true);
+    setCurrentMateriIdx(0);
+  };
+
+  const countPoint = (value: any) => {
+    setCurrentPoint(currentPoint + 1);
+    console.log(currentPoint);
+  };
+
+  const clickButtonSelanjutnyaSoalPage = (value: any) => {
+    console.log(value);
+    console.log(currentPoint);
+
+    setCurrentsoalIdx(currenSoalIdx + 1);
+    if (value.nextPage) {
+      setShowSoalPage(false);
+      setShowDoneLearnPage(true);
+    }
   };
 
   return (
@@ -48,41 +101,47 @@ export default function Home() {
             backgroundSize: "cover",
           }}
         >
-          <UserDataPage
-            btnClickEvent={() => {
-              alert("Hello");
-            }}
-          />
+          <UserDataPage btnClickEvent={clickButtonSimpanUserDataPage} />
         </div>
       )}
 
       {showMateriListPage && (
         <div className={`w-full h-full`}>
-          <MateriListPage />
+          <MateriListPage btnClickEvent={clickButtonMulaiMateriPage} />
         </div>
       )}
 
       {showMateriPage && (
         <div className={`w-full h-full`}>
-          <Materi />
+          <MateriPage
+            btnClickEvent={clickButtonSelanjutnyaMateriPage}
+            currentIdxParent={currenMateritIdx}
+          />
         </div>
       )}
 
       {showConfirMateriDonePage && (
         <div className={`w-full h-full`}>
-          <ConfirmMateriDone />
+          <ConfirmMateriDone
+            btnYaClickEvent={clickButtonYaMateriDonePage}
+            btnTidakClickEvent={clickButtonTidakMateriDonePage}
+          />
         </div>
       )}
 
       {showSoalPage && (
         <div className={`w-full h-full`}>
-          <Soal />
+          <SoalPage
+            btnCountPointClickEvent={countPoint}
+            btnClickEvent={clickButtonSelanjutnyaSoalPage}
+            currentIdxParent={currenSoalIdx}
+          />
         </div>
       )}
 
       {showDoneLearnPage && (
         <div className={`w-full h-full`}>
-          <DoneLearn />
+          <DoneLearn currentPoint={currentPoint} />
         </div>
       )}
     </main>

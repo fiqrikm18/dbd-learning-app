@@ -1,4 +1,14 @@
-export const ConfirmMateriDone = () => {
+import { FunctionComponent } from "react";
+
+interface DoneMateriPageProps {
+  btnYaClickEvent: () => void;
+  btnTidakClickEvent: () => void;
+}
+
+export const ConfirmMateriDone: FunctionComponent<DoneMateriPageProps> = ({
+  btnYaClickEvent,
+  btnTidakClickEvent,
+}) => {
   return (
     <>
       <div className="w-full h-full p-24">
@@ -8,10 +18,16 @@ export const ConfirmMateriDone = () => {
           </h1>
 
           <div className="mt-8">
-            <button className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 mr-4">
+            <button
+              onClick={btnYaClickEvent}
+              className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 mr-4"
+            >
               Iya
             </button>
-            <button className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2">
+            <button
+              onClick={btnTidakClickEvent}
+              className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2"
+            >
               Tidak
             </button>
           </div>
