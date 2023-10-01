@@ -1,0 +1,233 @@
+[
+  {
+    "q": "Apa itu demam berdarah dengue (DBD)?",
+    "a": [
+      {
+        "content": "demam yang disebabkan oleh bakteri",
+        "answer": false
+      },
+      {
+        "content": "penyakit yang dibawa oleh tikus ke manusia melalui air liurnya",
+        "answer": false
+      },
+      {
+        "content": "penyakit yang dibawa oleh nyamuk ",
+        "answer": true
+      },
+      {
+        "content": "virus e colli yang dibawa oleh nyamuk",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "Di manakah nyamuk Aedes aegypti berkembang biak?",
+    "a": [
+      {
+        "content": "genangan air bersih",
+        "answer": true
+      },
+      {
+        "content": "baju yang menggantung",
+        "answer": false
+      },
+      {
+        "content": "tempat yang terpapar sinar matahari",
+        "answer": false
+      },
+      {
+        "content": "lumut",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "Bagaimana cara penularan penyakit demam berdarah?",
+    "a": [
+      {
+        "content": "Ditularkan melalui gigitan nyamuk yang terinfeksi virus",
+        "answer": true
+      },
+      {
+        "content": "Ditularkan melalui droplet dan cairan tubuh",
+        "answer": false
+      },
+      {
+        "content": "Ditularkan melalui sentuhan",
+        "answer": false
+      },
+      {
+        "content": "Ditularkan melalui jarum suntik",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "Apakah demam berdarah bisa menular antarmanusia?",
+    "a": [
+      {
+        "content": "Bisa",
+        "answer": false
+      },
+      {
+        "content": "Tidak bisa",
+        "answer": true
+      },
+      {
+        "content": "Mungkin",
+        "answer": false
+      },
+      {
+        "content": "Tergantung imun tubuh",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "Apa saja gejala demam berdarah?",
+    "a": [
+      {
+        "content": "suhu tubuh dibawah 36 derajat, nyeri otot, pusing",
+        "answer": false
+      },
+      {
+        "content": "muntah, gatal gatal, demam ",
+        "answer": false
+      },
+      {
+        "content": "terdapat bitnik merah, demam, nyeri otot, pendarahan",
+        "answer": true
+      },
+      {
+        "content": "terdapat bitnik merah, gatal gatal, nyeri ulu hati",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "Apakah yang menandakan demam berdarah parah?",
+    "a": [
+      {
+        "content": "Pusing hingga muntah",
+        "answer": false
+      },
+      {
+        "content": "nyeri otot, mual",
+        "answer": false
+      },
+      {
+        "content": "demam dan nyeri dibelakang mata",
+        "answer": false
+      },
+      {
+        "content": "nyeri perut dan pendarahan",
+        "answer": true
+      }
+    ]
+  },
+  {
+    "q": "Seperti apa siklus penyakit demam berdarah?",
+    "a": [
+      {
+        "content": "fase demam 2- 7 hari, fase kritis demam hingga 40 derajat, fase pemulihan trombosit mulai normal",
+        "answer": false
+      },
+      {
+        "content": "fase demam terasa nyeri otot, fase kritis suhu tubuh kurang dari 38 derajat, fase pemulihan sembuh sepenuhnya",
+        "answer": false
+      },
+      {
+        "content": "fase demam terdapat bitnik merah, fase kritis mengalami pendarahan, fase pemulihan sembuh sepenuhnya",
+        "answer": false
+      },
+      {
+        "content": "fase demam terdapat bitnik merah, fase kritis demam turun tetapi beresiko terjadi pendarahan, fase pemulihan trombosit mulai normal",
+        "answer": true
+      }
+    ]
+  },
+  {
+    "q": "Bagaimana cara mencegah penyakit demam berdarah?",
+    "a": [
+      {
+        "content": "Mandi 2 kali sehari",
+        "answer": false
+      },
+      {
+        "content": "Melaksanakan 3M",
+        "answer": true
+      },
+      {
+        "content": "Memakai baju Panjang",
+        "answer": false
+      },
+      {
+        "content": "Tidak panas- panasan",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "Virus apa yang menyebabkan demam dengue?",
+    "a": [
+      {
+        "content": "Virus nipah",
+        "answer": false
+      },
+      {
+        "content": "Hantavirus",
+        "answer": false
+      },
+      {
+        "content": "Virus Marburg",
+        "answer": false
+      },
+      {
+        "content": "Virus dengue",
+        "answer": true
+      }
+    ]
+  },
+  {
+    "q": "Berapa lama masa inkubasi demam berdarah?",
+    "a": [
+      {
+        "content": "1- 5 hari",
+        "answer": false
+      },
+      {
+        "content": "2-5 hari",
+        "answer": true
+      },
+      {
+        "content": "2- 7 hari",
+        "answer": false
+      },
+      {
+        "content": "sebulan",
+        "answer": false
+      }
+    ]
+  },
+  {
+    "q": "apa nama nyamuk yang menginfeksi demam berdarah?",
+    "a": [
+      {
+        "content": "Nyamuk aedes",
+        "answer": true
+      },
+      {
+        "content": "Nyamuk anophelex",
+        "answer": false
+      },
+      {
+        "content": "Nyamuk malaria",
+        "answer": false
+      },
+      {
+        "content": "Nyamuk enchepalitis",
+        "answer": false
+      }
+    ]
+  }
+]
