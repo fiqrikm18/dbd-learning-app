@@ -1,4 +1,5 @@
-import { FunctionComponent } from "react";
+import { Soal, getSoalData } from "@/data/localdata";
+import { FunctionComponent, useEffect, useState } from "react";
 
 interface DonePageProps {
   currentPoint: number;
@@ -7,6 +8,12 @@ interface DonePageProps {
 export const DoneLearn: FunctionComponent<DonePageProps> = ({
   currentPoint,
 }) => {
+  const [soal, setSoal] = useState<Soal[]>([]);
+
+  useEffect(() => {
+    setSoal(getSoalData());
+  }, []);
+
   return (
     <>
       <div className="w-full h-full p-24">
@@ -20,7 +27,7 @@ export const DoneLearn: FunctionComponent<DonePageProps> = ({
             <p className="text-[16pt] font-semibold">Nilai anda adalah</p>
             <div className="flex flex-col justify-center items-center mt-4">
               <div className="border-solid border-gray-700 border-2 py-4 px-10 rounded-md">
-                {currentPoint}
+                {`${currentPoint}/${soal.length}`}
               </div>
             </div>
             <button

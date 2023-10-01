@@ -63,13 +63,9 @@ export default function Home() {
 
   const countPoint = (value: any) => {
     setCurrentPoint(currentPoint + 1);
-    console.log(currentPoint);
   };
 
   const clickButtonSelanjutnyaSoalPage = (value: any) => {
-    console.log(value);
-    console.log(currentPoint);
-
     setCurrentsoalIdx(currenSoalIdx + 1);
     if (value.nextPage) {
       setShowSoalPage(false);

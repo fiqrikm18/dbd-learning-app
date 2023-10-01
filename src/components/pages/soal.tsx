@@ -1,4 +1,4 @@
-import { Soal, getSoalData } from "@/data/localdata";
+import { Answer, Soal, getSoalData } from "@/data/localdata";
 import { FunctionComponent, useEffect, useState } from "react";
 
 interface SoalPageProps {
@@ -21,6 +21,14 @@ export const SoalPage: FunctionComponent<SoalPageProps> = ({
 
   const capitalizeFirstLetter = (txt: string) => {
     return txt.charAt(0).toUpperCase() + txt.slice(1);
+  };
+
+  const btnAnswerClick = (e: any, answr: Answer) => {
+    e.target.style.color = "white";
+    e.target.style.background = "#374151";
+    if (answr.answer) {
+      btnCountPointClickEvent(answr.answer);
+    }
   };
 
   const mapIdx = (idx: number) => {
@@ -74,10 +82,8 @@ export const SoalPage: FunctionComponent<SoalPageProps> = ({
                   <p
                     key={answerIdx}
                     className="p-4 my-4 border-2 border-solid border-gray-700 rounded-md hover:bg-gray-700 hover:text-white hover:cursor-pointer"
-                    onClick={() => {
-                      if (answr.answer) {
-                        btnCountPointClickEvent(answr.answer);
-                      }
+                    onClick={(e) => {
+                      btnAnswerClick(e, answr);
                     }}
                   >
                     {`${mapIdx(answerIdx)} ${capitalizeFirstLetter(
