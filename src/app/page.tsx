@@ -52,9 +52,10 @@ export default function Home() {
 
   const clickButtonKembaliMateriPage = (value: any) => {
     setCurrentMateriIdx(currenMateritIdx - 1);
+    console.log("NextPage: ", value.nextPage);
     if (value.nextPage) {
-      setShowMateriPage(false);
-      setShowConfirMateriDonePage(true);
+      setShowMateriPage(true);
+      setShowConfirMateriDonePage(false);
     }
   };
 
