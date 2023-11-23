@@ -32,7 +32,7 @@ export const DoneLearn: FunctionComponent<DonePageProps> = ({
             </div>
             <button
               onClick={() => window.location.reload()}
-              className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 mt-6"
+              className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md border-solid border-gray-700 hover:text-gray-700 hover:bg-white border-2 mt-6"
             >
               Selesai
             </button>

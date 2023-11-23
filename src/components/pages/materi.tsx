@@ -2,12 +2,14 @@ import { FunctionComponent, useEffect, useState } from "react";
 import { getMateriData, Materi } from "@/data/localdata";
 
 interface MateriPageProps {
-  btnClickEvent: (value: any) => void;
+  btnNextClickEvent: (value: any) => void;
+  btnPrevClickEvent: (value: any) => void;
   currentIdxParent: number;
 }
 
 export const MateriPage: FunctionComponent<MateriPageProps> = ({
-  btnClickEvent,
+  btnNextClickEvent,
+  btnPrevClickEvent,
   currentIdxParent,
 }) => {
   const [materiData, setMateriData] = useState<Materi[]>([]);
@@ -17,9 +19,17 @@ export const MateriPage: FunctionComponent<MateriPageProps> = ({
     setMateriData(getMateriData());
   }, []);
 
-  const handleClickEnvet = () => {
+  const handleClickNextEnvet = () => {
     setCurrentIdx(currentIdxParent + 1);
-    btnClickEvent({
+    btnNextClickEvent({
+      currentIdxParent,
+      nextPage: currentIdxParent === materiData.length - 1,
+    });
+  };
+
+  const handleClickPrevEnvet = () => {
+    setCurrentIdx(currentIdxParent - 1);
+    btnPrevClickEvent({
       currentIdxParent,
       nextPage: currentIdxParent === materiData.length - 1,
     });
@@ -59,9 +69,18 @@ export const MateriPage: FunctionComponent<MateriPageProps> = ({
           </div>
         ))}
 
-        <div className="text-center mt-8">
+        <div className="flex flex-row gap-3 justify-center items-center mt-8">
+          {
+            currentIdxParent > 0 &&
+            <button
+              onClick={handleClickPrevEnvet}
+              className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2"
+            >
+              Kembali
+            </button>
+          }
           <button
-            onClick={handleClickEnvet}
+            onClick={handleClickNextEnvet}
             className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2"
           >
             Selanjutnya

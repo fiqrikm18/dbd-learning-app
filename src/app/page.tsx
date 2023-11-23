@@ -14,8 +14,7 @@ export default function Home() {
   const [showUserDataPage, setShowUserDataPage] = useState(false);
   const [showMateriListPage, setShowMateriListPage] = useState(false);
   const [showMateriPage, setShowMateriPage] = useState(false);
-  const [showConfirMateriDonePage, setShowConfirMateriDonePage] =
-    useState(false);
+  const [showConfirMateriDonePage, setShowConfirMateriDonePage] = useState(false);
   const [showSoalPage, setShowSoalPage] = useState(false);
   const [showDoneLearnPage, setShowDoneLearnPage] = useState(false);
   const [currenMateritIdx, setCurrentMateriIdx] = useState<number>(0);
@@ -50,6 +49,15 @@ export default function Home() {
     }
   };
 
+
+  const clickButtonKembaliMateriPage = (value: any) => {
+    setCurrentMateriIdx(currenMateritIdx - 1);
+    if (value.nextPage) {
+      setShowMateriPage(false);
+      setShowConfirMateriDonePage(true);
+    }
+  };
+
   const clickButtonYaMateriDonePage = () => {
     setShowConfirMateriDonePage(false);
     setShowSoalPage(true);
@@ -61,7 +69,7 @@ export default function Home() {
     setCurrentMateriIdx(0);
   };
 
-  const countPoint = (value: any) => {
+  const countPoint = () => {
     setCurrentPoint(currentPoint + 1);
   };
 
@@ -110,7 +118,8 @@ export default function Home() {
       {showMateriPage && (
         <div className={`w-full h-full`}>
           <MateriPage
-            btnClickEvent={clickButtonSelanjutnyaMateriPage}
+            btnNextClickEvent={clickButtonSelanjutnyaMateriPage}
+            btnPrevClickEvent={clickButtonKembaliMateriPage}
             currentIdxParent={currenMateritIdx}
           />
         </div>
