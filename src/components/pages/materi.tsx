@@ -1,5 +1,6 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import { getMateriData, Materi } from "@/data/localdata";
+import { mapRange } from "gsap";
 
 interface MateriPageProps {
   btnNextClickEvent: (value: any) => void;
@@ -66,19 +67,35 @@ export const MateriPage: FunctionComponent<MateriPageProps> = ({
                 </ul>
               )}
             </div>
+
+            <div className="grid grid-cols-3 gap-4 mt-10">
+              {materi.images.map((image, imageIdx) => (
+                <div
+                  key={imageIdx}
+                  style={{
+                    backgroundImage: `url(/${image})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    minHeight: "250px",
+                  }}
+                >
+                  {/* {image} */}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
 
         <div className="flex flex-row gap-3 justify-center items-center mt-8">
-          {
-            currentIdxParent > 0 &&
+          {currentIdxParent > 0 && (
             <button
               onClick={handleClickPrevEnvet}
               className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2"
             >
               Kembali
             </button>
-          }
+          )}
           <button
             onClick={handleClickNextEnvet}
             className="bg-gray-700 text-white font-semibold p-2 min-w-[200px] rounded-md hover:border-solid hover:border-gray-700 hover:text-gray-700 hover:bg-white hover:border-2"
