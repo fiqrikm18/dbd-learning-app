@@ -17,8 +17,9 @@ export const MateriPage: FunctionComponent<MateriPageProps> = ({
   const [currentIdx, setCurrentIdx] = useState<number>(0);
 
   useEffect(() => {
+    setCurrentIdx(currentIdxParent);
     setMateriData(getMateriData());
-  }, []);
+  }, [currentIdxParent]);
 
   const handleClickNextEnvet = () => {
     setCurrentIdx(currentIdxParent + 1);

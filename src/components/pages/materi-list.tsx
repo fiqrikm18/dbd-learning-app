@@ -3,10 +3,12 @@ import { FunctionComponent, useEffect, useState } from "react";
 
 interface WelcomePageProps {
   btnClickEvent: () => void;
+  btnClickMateriEvent: (idx: Number) => void;
 }
 
 export const MateriListPage: FunctionComponent<WelcomePageProps> = ({
   btnClickEvent,
+  btnClickMateriEvent,
 }) => {
   const [materiData, setMateriData] = useState<Materi[]>([]);
 
@@ -28,11 +30,12 @@ export const MateriListPage: FunctionComponent<WelcomePageProps> = ({
         <div className="grid grid-cols-3 gap-4 mt-6">
           {materiData.map((materi, idx) => (
             <div
+              onClick={() => btnClickMateriEvent(idx)}
               key={idx}
               className={`${
                 idx % 2 == 0
-                  ? "flex flex-col justify-center items-center border-solid border-2 border-gray-800 bg-cyan-100 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white"
-                  : "flex flex-col justify-center items-center border-solid border-2 border-gray-800 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white"
+                  ? "flex flex-col justify-center items-center border-solid border-2 border-gray-800 bg-cyan-100 p-4 rounded-md min-h-[250px] hover:bg-gray-800 cursor-pointer hover:text-white"
+                  : "flex flex-col justify-center items-center border-solid border-2 border-gray-800 p-4 rounded-md min-h-[250px] hover:bg-gray-800 cursor-pointer hover:text-white"
               }`}
             >
               <p className="font-bold text-lg underline underline-offset-4">

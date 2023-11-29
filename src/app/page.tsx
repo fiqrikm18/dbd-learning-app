@@ -14,7 +14,8 @@ export default function Home() {
   const [showUserDataPage, setShowUserDataPage] = useState(false);
   const [showMateriListPage, setShowMateriListPage] = useState(false);
   const [showMateriPage, setShowMateriPage] = useState(false);
-  const [showConfirMateriDonePage, setShowConfirMateriDonePage] = useState(false);
+  const [showConfirMateriDonePage, setShowConfirMateriDonePage] =
+    useState(false);
   const [showSoalPage, setShowSoalPage] = useState(false);
   const [showDoneLearnPage, setShowDoneLearnPage] = useState(false);
   const [currenMateritIdx, setCurrentMateriIdx] = useState<number>(0);
@@ -49,6 +50,11 @@ export default function Home() {
     }
   };
 
+  const clickButtonGotoMateriPage = (value: any) => {
+    setCurrentMateriIdx(value);
+    setShowMateriListPage(false);
+    setShowMateriPage(true);
+  };
 
   const clickButtonKembaliMateriPage = (value: any) => {
     setCurrentMateriIdx(currenMateritIdx - 1);
@@ -111,7 +117,10 @@ export default function Home() {
 
       {showMateriListPage && (
         <div className={`w-full h-full`}>
-          <MateriListPage btnClickEvent={clickButtonMulaiMateriPage} />
+          <MateriListPage
+            btnClickEvent={clickButtonMulaiMateriPage}
+            btnClickMateriEvent={clickButtonGotoMateriPage}
+          />
         </div>
       )}
 
