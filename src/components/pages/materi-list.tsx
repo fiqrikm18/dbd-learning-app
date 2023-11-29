@@ -19,7 +19,7 @@ export const MateriListPage: FunctionComponent<WelcomePageProps> = ({
         </div>
 
         <div className="grid grid-cols-3 gap-4 mt-6">
-          <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-800 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white">
+          <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-800 bg-cyan-100 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white">
             <p className="font-bold text-lg underline underline-offset-4">
               Materi 1
             </p>
@@ -37,7 +37,7 @@ export const MateriListPage: FunctionComponent<WelcomePageProps> = ({
             </span>
           </div>
 
-          <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-800 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white">
+          <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-800 bg-cyan-100 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white">
             <p className="font-bold text-lg underline underline-offset-4">
               Materi 3
             </p>
@@ -55,7 +55,7 @@ export const MateriListPage: FunctionComponent<WelcomePageProps> = ({
             </span>
           </div>
 
-          <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-800 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white">
+          <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-800 bg-cyan-100 p-4 rounded-md min-h-[250px] hover:bg-gray-800 hover:text-white">
             <p className="font-bold text-lg underline underline-offset-4">
               Materi 5
             </p>
