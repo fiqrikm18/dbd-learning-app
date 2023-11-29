@@ -207,137 +207,137 @@ export function getSoalData(): Array<Soal> {
         }
       ]
     },
-    {
-      "id": 5,
-      "question": "Apakah yang menandakan demam berdarah parah?",
-      "answer": [
-        {
-          "content": "Pusing hingga muntah",
-          "answer": false
-        },
-        {
-          "content": "nyeri otot, mual",
-          "answer": false
-        },
-        {
-          "content": "demam dan nyeri dibelakang mata",
-          "answer": false
-        },
-        {
-          "content": "nyeri perut dan pendarahan",
-          "answer": true
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "question": "Seperti apa siklus penyakit demam berdarah?",
-      "answer": [
-        {
-          "content": "fase demam 2- 7 hari, fase kritis demam hingga 40 derajat, fase pemulihan trombosit mulai normal",
-          "answer": false
-        },
-        {
-          "content": "fase demam terasa nyeri otot, fase kritis suhu tubuh kurang dari 38 derajat, fase pemulihan sembuh sepenuhnya",
-          "answer": false
-        },
-        {
-          "content": "fase demam terdapat bitnik merah, fase kritis mengalami pendarahan, fase pemulihan sembuh sepenuhnya",
-          "answer": false
-        },
-        {
-          "content": "fase demam terdapat bitnik merah, fase kritis demam turun tetapi beresiko terjadi pendarahan, fase pemulihan trombosit mulai normal",
-          "answer": true
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "question": "Bagaimana cara mencegah penyakit demam berdarah?",
-      "answer": [
-        {
-          "content": "Mandi 2 kali sehari",
-          "answer": false
-        },
-        {
-          "content": "Melaksanakan 3M",
-          "answer": true
-        },
-        {
-          "content": "Memakai baju Panjang",
-          "answer": false
-        },
-        {
-          "content": "Tidak panas- panasan",
-          "answer": false
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "question": "Virus apa yang menyebabkan demam dengue?",
-      "answer": [
-        {
-          "content": "Virus nipah",
-          "answer": false
-        },
-        {
-          "content": "Hantavirus",
-          "answer": false
-        },
-        {
-          "content": "Virus Marburg",
-          "answer": false
-        },
-        {
-          "content": "Virus dengue",
-          "answer": true
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "question": "Berapa lama masa inkubasi demam berdarah?",
-      "answer": [
-        {
-          "content": "1- 5 hari",
-          "answer": false
-        },
-        {
-          "content": "2-5 hari",
-          "answer": true
-        },
-        {
-          "content": "2- 7 hari",
-          "answer": false
-        },
-        {
-          "content": "sebulan",
-          "answer": false
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "question": "apa nama nyamuk yang menginfeksi demam berdarah?",
-      "answer": [
-        {
-          "content": "Nyamuk aedes",
-          "answer": true
-        },
-        {
-          "content": "Nyamuk anophelex",
-          "answer": false
-        },
-        {
-          "content": "Nyamuk malaria",
-          "answer": false
-        },
-        {
-          "content": "Nyamuk enchepalitis",
-          "answer": false
-        }
-      ]
-    }
+    // {
+    //   "id": 5,
+    //   "question": "Apakah yang menandakan demam berdarah parah?",
+    //   "answer": [
+    //     {
+    //       "content": "Pusing hingga muntah",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "nyeri otot, mual",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "demam dan nyeri dibelakang mata",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "nyeri perut dan pendarahan",
+    //       "answer": true
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 6,
+    //   "question": "Seperti apa siklus penyakit demam berdarah?",
+    //   "answer": [
+    //     {
+    //       "content": "fase demam 2- 7 hari, fase kritis demam hingga 40 derajat, fase pemulihan trombosit mulai normal",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "fase demam terasa nyeri otot, fase kritis suhu tubuh kurang dari 38 derajat, fase pemulihan sembuh sepenuhnya",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "fase demam terdapat bitnik merah, fase kritis mengalami pendarahan, fase pemulihan sembuh sepenuhnya",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "fase demam terdapat bitnik merah, fase kritis demam turun tetapi beresiko terjadi pendarahan, fase pemulihan trombosit mulai normal",
+    //       "answer": true
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 7,
+    //   "question": "Bagaimana cara mencegah penyakit demam berdarah?",
+    //   "answer": [
+    //     {
+    //       "content": "Mandi 2 kali sehari",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Melaksanakan 3M",
+    //       "answer": true
+    //     },
+    //     {
+    //       "content": "Memakai baju Panjang",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Tidak panas- panasan",
+    //       "answer": false
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 8,
+    //   "question": "Virus apa yang menyebabkan demam dengue?",
+    //   "answer": [
+    //     {
+    //       "content": "Virus nipah",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Hantavirus",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Virus Marburg",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Virus dengue",
+    //       "answer": true
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 9,
+    //   "question": "Berapa lama masa inkubasi demam berdarah?",
+    //   "answer": [
+    //     {
+    //       "content": "1- 5 hari",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "2-5 hari",
+    //       "answer": true
+    //     },
+    //     {
+    //       "content": "2- 7 hari",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "sebulan",
+    //       "answer": false
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 10,
+    //   "question": "apa nama nyamuk yang menginfeksi demam berdarah?",
+    //   "answer": [
+    //     {
+    //       "content": "Nyamuk aedes",
+    //       "answer": true
+    //     },
+    //     {
+    //       "content": "Nyamuk anophelex",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Nyamuk malaria",
+    //       "answer": false
+    //     },
+    //     {
+    //       "content": "Nyamuk enchepalitis",
+    //       "answer": false
+    //     }
+    //   ]
+    // }
   ]
 }
